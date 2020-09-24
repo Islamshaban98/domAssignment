@@ -43,74 +43,63 @@ const siteContent = {
 };
 
 // write your code here
-const a1 = document.querySelector('body > div.container > header > nav > a:nth-child(1)') ;
-a1.textContent='Services';
-
-const a2 = document.querySelector('body > div.container > header > nav > a:nth-child(2)') ;
-a2.textContent='Product';
-
-const a3 = document.querySelector('body > div.container > header > nav > a:nth-child(3)') ;
-a3.textContent='Vision';
-
-const a4 = document.querySelector('body > div.container > header > nav > a:nth-child(4)') ;
-a4.textContent='Features';
-
-const a5 = document.querySelector('body > div.container > header > nav > a:nth-child(5)') ;
-a5.textContent='About';
-
-const a6 = document.querySelector('body > div.container > header > nav > a:nth-child(6)') ;
-a5.textContent='Contact';
-
-const logo= document.querySelector('#logo-img').src='./img/logo.png';
+//nav
+const navs= document.getElementsByClassName('anchor');
+for(i=0;i<navs.length;i++){
+  navs[i].textContent=siteContent.nav['nav-item-' + (i+1)];
+}
+const logo= document.querySelector('#logo-img').src=siteContent.nav['img-src'];
 
 const h1= document.querySelector('body > div.container > section.cta > div > h1');
-h1.textContent='DOM Is Awesome';
-
+h1.textContent= siteContent.cta.h1;
 const button = document.querySelector('body > div.container > section.cta > div > button');
-button.textContent='Get Started';
+button.textContent=siteContent.cta.button;
 
-const snipt_img=document.querySelector('#cta-img').src='./img/header-img.png';
-
+const snipt_img=document.querySelector('#cta-img').src=siteContent.cta['img-src'];
+//mainContent
 const feature_4=document.querySelector('body > div.container > section.main-content > div.top-content > div:nth-child(1) > h4');
-feature_4.textContent='Features';
+feature_4.textContent=siteContent["main-content"]["features-h4"];
 
 const feature_content=document.querySelector('body > div.container > section.main-content > div.top-content > div:nth-child(1) > p');
-feature_content.textContent='Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+feature_content.textContent=siteContent["main-content"]["features-content"];
 
 const about= document.querySelector('body > div.container > section.main-content > div.top-content > div:nth-child(2) > h4');
-about.textContent='about';
+about.textContent=siteContent["main-content"]["about-h4"];
 
 const about_4= document.querySelector('body > div.container > section.main-content > div.top-content > div:nth-child(2) > p');
-about_4.textContent='About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+about_4.textContent=siteContent["main-content"]["about-content"];
 
-const mid_img =document.querySelector('#middle-img').src='./img/mid-page.jpg';
+const mid_img =document.querySelector('#middle-img').src=siteContent["main-content"]["middle-img-src"];
 
 const services= document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(1) > h4');
-services.textContent='services';
+services.textContent=siteContent["main-content"]["services-h4"];
 
 const services_4=document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(1) > p');
-services_4.textContent='Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+services_4.textContent=siteContent["main-content"]["services-content"];
 
 const product= document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(2) > h4');
-product.textContent='product';
+product.textContent=siteContent["main-content"]["product-h4"];
 
 const product_content= document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(2) > p');
-product_content.textContent='Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+product_content.textContent=siteContent["main-content"]["product-content"];
 
 const vision=document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(3) > h4');
-vision.textContent='vision';
+vision.textContent=siteContent["main-content"]["vision-h4"];
 
 const vision_content=document.querySelector('body > div.container > section.main-content > div.bottom-content > div:nth-child(3) > p');
-vision_content.textContent='Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+vision_content.textContent=siteContent["main-content"]["vision-content"];
 
 const contact=document.querySelector('body > div.container > section.contact > h4');
-contact.textContent='Contact';
+contact.textContent=siteContent.contact["contact-h4"];
 const address=document.querySelector('body > div.container > section.contact > p:nth-child(2)');
-address.textContent='123 Way 456 Street Somewhere, USA';
+address.textContent=siteContent.contact.address;
 const phone=document.querySelector('body > div.container > section.contact > p:nth-child(3)');
-phone.textContent='1 (888) 888-8888';
+phone.textContent=siteContent.contact.address;
 const email=document.querySelector('body > div.container > section.contact >  p:nth-child(4)');
-email.textContent='sales@greatidea.io';
-
+email.textContent=siteContent.contact.email;
+//footer
 const footer=document.querySelector('body > div.container > footer > p');
-footer.textContent='Copyright Great Idea! 2020';
+footer.textContent=siteContent.footer.copyright;
+
+
+
