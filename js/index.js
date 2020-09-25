@@ -43,6 +43,14 @@ const siteContent = {
 };
 
 // write your code here
+const html= document.querySelector('html');
+const prevBody= document.body.cloneNode(true);
+const Button= document.createElement('button');
+Button.textContent="click me "
+document.body.appendChild(Button);
+Button.addEventListener('click',function(){
+  html.replaceChild(prevBody,document.body)
+})
 //nav
 const navs= document.getElementsByClassName('anchor');
 for(i=0;i<navs.length;i++){
